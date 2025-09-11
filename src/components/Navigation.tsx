@@ -57,7 +57,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center gap-4">
+         <!-- <div className="hidden md:flex items-center gap-4">
             <button className="glass px-4 py-2 rounded-xl hover-lift flex items-center gap-2 font-medium">
               <Download className="w-4 h-4" />
               <span>Resume</span>
@@ -66,7 +66,7 @@ const Navigation = () => {
               <span>Hire Me</span>
               <ExternalLink className="w-4 h-4" />
             </button>
-          </div>
+          </div> -->
 
           {/* Mobile Menu Button */}
           <button

@@ -27,8 +27,8 @@ const HeroSection = () => {
         
         {/* Name & Title */}
         <h1 className="text-6xl md:text-8xl font-black mb-6">
-          <span className="gradient-text animate-fade-in-left bg-gradient-to-r from-primary via-tertiary to-primary bg-[length:200%_100%] animate-gradient-shift" style={{ animationDelay: '0.2s' }}>Alex</span>{" "}
-          <span className="text-foreground animate-fade-in-right" style={{ animationDelay: '0.4s' }}>Rivera</span>
+          <span className="gradient-text animate-fade-in-left bg-gradient-to-r from-primary via-tertiary to-primary bg-[length:200%_100%] animate-gradient-shift" style={{ animationDelay: "0.2s" }}>Katleho</span>{" "}
+          <span className="text-foreground animate-fade-in-right" style={{ animationDelay: "0.4s" }}>Marite</span>
         </h1>
         
         <div className="text-2xl md:text-4xl font-bold mb-8 animate-scale-up" style={{ animationDelay: '0.6s' }}>

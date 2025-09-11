@@ -34,7 +34,7 @@ const AboutSection = () => {
               <div className="relative">
                 <img
                   src={developerAvatar}
-                  alt="Alex Rivera - Software Developer"
+                  alt="Katleho Marite - Software Developer"
                   className="w-full h-80 object-cover rounded-2xl shadow-elevated"
                 />
                 

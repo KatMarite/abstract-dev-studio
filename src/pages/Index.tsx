@@ -44,8 +44,7 @@ const Index = () => {
             
             <div className="flex items-center gap-6">
               <span className="text-sm text-muted-foreground">Built with passion </span>
-              
-          </div>
+            </div>
         </div>
       </footer>
     </div>

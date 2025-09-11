@@ -37,9 +37,9 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center">
-              <span className="text-lg font-black text-background">AR</span>
+              <span className="text-lg font-black text-background">KM</span>
             </div>
-            <span className="text-xl font-black gradient-text">Alex Rivera</span>
+            <span className="text-xl font-black gradient-text">Katleho Marite</span>
           </div>
 
           {/* Desktop Navigation */}

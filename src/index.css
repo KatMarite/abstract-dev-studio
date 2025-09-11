@@ -237,7 +237,7 @@
 
   /* Portfolio card styles */
   .portfolio-card {
-    @apply relative group glass-card p-6 rounded-3xl hover-lift;
+    @apply relative glass-card p-6 rounded-3xl hover-lift;
     @apply border border-border/20;
   }
 

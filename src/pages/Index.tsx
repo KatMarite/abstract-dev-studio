@@ -43,8 +43,10 @@ const Index = () => {
             </div>
             
             <div className="flex items-center gap-6">
-              <span className="text-sm text-muted-foreground">Built with passion </span>
+              <span className="text-sm text-muted-foreground">Built with passion and</span>
+              <div className="w-4 h-4 bg-gradient-to-br from-red-500 to-pink-500 rounded-full animate-pulse" />
             </div>
+          </div>
         </div>
       </footer>
     </div>

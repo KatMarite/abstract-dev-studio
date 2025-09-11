@@ -103,6 +103,26 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "fade-in-left": {
+          from: {
+            opacity: "0",
+            transform: "translateX(-50px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        "fade-in-right": {
+          from: {
+            opacity: "0",
+            transform: "translateX(50px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
         "slide-in-right": {
           from: {
             opacity: "0",
@@ -113,39 +133,124 @@ export default {
             transform: "translateX(0)",
           },
         },
-        "float": {
-          "0%, 100%": {
-            transform: "translateY(0px)",
+        "scale-up": {
+          from: {
+            opacity: "0",
+            transform: "scale(0.8)",
+          },
+          to: {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+        },
+        "bounce-in": {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.3)",
           },
           "50%": {
-            transform: "translateY(-20px)",
+            opacity: "1",
+            transform: "scale(1.05)",
+          },
+          "70%": {
+            transform: "scale(0.9)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+        },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px) rotate(0deg)",
+          },
+          "33%": {
+            transform: "translateY(-15px) rotate(1deg)",
+          },
+          "66%": {
+            transform: "translateY(-5px) rotate(-1deg)",
+          },
+        },
+        "float-delayed": {
+          "0%, 100%": {
+            transform: "translateY(0px) rotate(0deg)",
+          },
+          "33%": {
+            transform: "translateY(-10px) rotate(-1deg)",
+          },
+          "66%": {
+            transform: "translateY(-20px) rotate(1deg)",
           },
         },
         "morph": {
           "0%, 100%": {
             borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+            transform: "rotate(0deg)",
+          },
+          "25%": {
+            borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%",
+            transform: "rotate(90deg)",
           },
           "50%": {
-            borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%",
+            borderRadius: "70% 30% 60% 40% / 40% 50% 60% 30%",
+            transform: "rotate(180deg)",
+          },
+          "75%": {
+            borderRadius: "40% 70% 30% 60% / 60% 40% 30% 50%",
+            transform: "rotate(270deg)",
           },
         },
         "pulse-glow": {
           "0%, 100%": {
             boxShadow: "0 0 20px hsl(var(--primary) / 0.3)",
+            transform: "scale(1)",
           },
           "50%": {
             boxShadow: "0 0 40px hsl(var(--primary) / 0.6)",
+            transform: "scale(1.02)",
+          },
+        },
+        "gradient-shift": {
+          "0%, 100%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+        },
+        "typing": {
+          from: {
+            width: "0",
+          },
+          to: {
+            width: "100%",
+          },
+        },
+        "blink": {
+          "0%, 50%": {
+            borderColor: "transparent",
+          },
+          "51%, 100%": {
+            borderColor: "hsl(var(--primary))",
           },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-up": "fade-up 0.6s ease-out",
+        "fade-up": "fade-up 0.8s ease-out",
+        "fade-in-left": "fade-in-left 0.8s ease-out",
+        "fade-in-right": "fade-in-right 0.8s ease-out",
         "slide-in-right": "slide-in-right 0.6s ease-out",
-        "float": "float 6s ease-in-out infinite",
-        "morph": "morph 8s ease-in-out infinite",
-        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "scale-up": "scale-up 0.6s ease-out",
+        "bounce-in": "bounce-in 0.8s ease-out",
+        "float": "float 8s ease-in-out infinite",
+        "float-delayed": "float-delayed 10s ease-in-out infinite",
+        "morph": "morph 12s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 4s ease-in-out infinite",
+        "typing": "typing 2s steps(40, end)",
+        "blink": "blink 1s infinite",
       },
     },
   },

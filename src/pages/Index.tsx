@@ -37,9 +37,9 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-sm font-black text-background">AR</span>
+                <span className="text-sm font-black text-background">KM</span>
               </div>
-              <span className="font-bold text-muted-foreground">© 2024 Alex Rivera. All rights reserved.</span>
+              <span className="font-bold text-muted-foreground">© 2025 Katleho Marite. All rights reserved.</span>
             </div>
             
             <div className="flex items-center gap-6">

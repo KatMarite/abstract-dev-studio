@@ -61,7 +61,7 @@ const HeroSection = () => {
           </button>
           
           <a 
-            href="/resume-katleho-marite.pdf" 
+            href="/katlehocv.pdf" 
             download="Katleho_Marite_Resume.pdf"
             className="btn-secondary group animate-scale-up" 
             style={{ animationDelay: '1.2s' }}

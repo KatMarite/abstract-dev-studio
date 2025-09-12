@@ -13,6 +13,9 @@ const ProjectsSection = () => {
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center",
       gradient: "from-emerald-500 to-teal-600",
       featured: true,
+      liveDemoUrl: "https://job-readiness-demo.example.com",
+      sourceCodeUrl: "https://github.com/KatMarite/Job-Readiness-Coach",
+      projectUrl: "https://job-readiness-project.example.com",
     },
     {
       id: 2,
@@ -24,6 +27,9 @@ const ProjectsSection = () => {
       image:
         "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop&crop=center",
       gradient: "from-blue-500 to-purple-600",
+      liveDemoUrl: "https://ai-resume-demo.example.com",
+      sourceCodeUrl: "https://github.com/KatMarite/ai-resume-builder",
+      projectUrl: "https://ai-resume-builder.example.com",
     },
     {
       id: 3,
@@ -35,6 +41,9 @@ const ProjectsSection = () => {
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&crop=center",
       gradient: "from-pink-500 to-rose-600",
+      liveDemoUrl: "https://verse-engine-demo.example.com",
+      sourceCodeUrl: "https://github.com/KatMarite/verse-engine",
+      projectUrl: "https://verse-engine.example.com",
     },
     {
       id: 4,
@@ -46,6 +55,9 @@ const ProjectsSection = () => {
       image:
         "https://images.unsplash.com/photo-1592478411213-6153e4ebc696?w=800&h=600&fit=crop&crop=center",
       gradient: "from-orange-500 to-red-600",
+      liveDemoUrl: "https://sentiment-dashboard-demo.example.com",
+      sourceCodeUrl: "https://github.com/KatMarite/sentiment-dashboard",
+      projectUrl: "https://sentiment-dashboard.example.com",
     },
   ];
 
@@ -70,7 +82,7 @@ const ProjectsSection = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Project Image */}
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-5000 animate-pulse-glow" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-5000 animate-pulse-g[...]"></div>
                   <img
                     src={project.image}
                     alt={project.title}
@@ -80,13 +92,23 @@ const ProjectsSection = () => {
                   
                   {/* Overlay Actions */}
                   <div className="absolute bottom-6 left-6 right-6 flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="btn-secondary flex-1 text-sm">
+                    <a
+                      href={project.liveDemoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary flex-1 text-sm flex items-center justify-center"
+                    >
                       <Play className="w-4 h-4" />
                       <span>Live Demo</span>
-                    </button>
-                    <button className="glass w-12 h-12 rounded-xl flex items-center justify-center hover-scale">
+                    </a>
+                    <a
+                      href={project.sourceCodeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="glass w-12 h-12 rounded-xl flex items-center justify-center hover-scale"
+                    >
                       <Github className="w-5 h-5 text-muted-foreground" />
-                    </button>
+                    </a>
                   </div>
                 </div>
 
@@ -124,14 +146,24 @@ const ProjectsSection = () => {
 
                   {/* Action Buttons */}
                   <div className="flex gap-4 pt-4">
-                    <button className="btn-hero">
+                    <a
+                      href={project.projectUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-hero flex items-center"
+                    >
                       <ExternalLink className="w-5 h-5" />
                       <span>View Project</span>
-                    </button>
-                    <button className="glass px-6 py-3 rounded-xl font-semibold hover-lift">
+                    </a>
+                    <a
+                      href={project.sourceCodeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="glass px-6 py-3 rounded-xl font-semibold hover-lift flex items-center"
+                    >
                       <Github className="w-5 h-5 inline mr-2" />
                       Source Code
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -157,18 +189,26 @@ const ProjectsSection = () => {
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-40 transition-opacity duration-300`}
                 />
-                
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
                 {/* Quick Actions */}
                 <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="glass w-10 h-10 rounded-lg flex items-center justify-center hover-scale">
+                  <a
+                    href={project.liveDemoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass w-10 h-10 rounded-lg flex items-center justify-center hover-scale"
+                  >
                     <ExternalLink className="w-4 h-4 text-muted-foreground" />
-                  </button>
-                  <button className="glass w-10 h-10 rounded-lg flex items-center justify-center hover-scale">
+                  </a>
+                  <a
+                    href={project.sourceCodeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass w-10 h-10 rounded-lg flex items-center justify-center hover-scale"
+                  >
                     <Github className="w-4 h-4 text-muted-foreground" />
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -207,7 +247,6 @@ const ProjectsSection = () => {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

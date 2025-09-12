@@ -1,5 +1,5 @@
 import { ExternalLink, Github, Play } from "lucide-react";
-import jobreadiness from "../assets/job-readiness.jpg";
+import jobreadiness from "@/assets/job-readiness.jpg";
 
 const ProjectsSection = () => {
   const projects = [

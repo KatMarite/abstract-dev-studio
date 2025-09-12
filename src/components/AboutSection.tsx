@@ -66,20 +66,10 @@ const AboutSection = () => {
               </h3>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  I'm a passionate full-stack developer who believes that great software 
-                  is born from the perfect fusion of <span className="text-primary font-semibold">technical expertise</span> and 
-                  <span className="text-accent font-semibold"> creative vision</span>.
+                  A passionate and results driven AI/ML enthusiast with a strong foundation in full-stack web development. I specialize in building  <span className="text-primary font-semibold">data-driven applications</span> and models that 
+                  <span className="text-accent font-semibold"> solve real-world problems.</span> My career objective is to leverage my skills in machine learning, Python, and modern web frameworks to contribute to innovative projects in a collaborative environment.
                 </p>
-                <p>
-                  With 5+ years of experience building scalable web applications, 
-                  I specialize in React, Node.js, and cloud technologies. My approach 
-                  combines clean, maintainable code with stunning user experiences.
-                </p>
-                <p>
-                  When I'm not coding, you'll find me exploring the latest design trends, 
-                  contributing to open-source projects, or experimenting with new technologies 
-                  that push the boundaries of what's possible on the web.
-                </p>
+                
               </div>
             </div>
 

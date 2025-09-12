@@ -50,14 +50,14 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section className="section-container bg-gradient-to-br from-surface/30 to-surface-elevated/50">
+    <section id="projects" className="section-container bg-gradient-to-br from-surface/30 to-surface-elevated/50">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-black mb-6">
-            Featured <span className="gradient-text">Projects</span>
+          <h2 className="text-5xl md:text-6xl font-black mb-6 animate-slide-up">
+            Featured <span className="gradient-text animate-shimmer bg-gradient-to-r from-primary via-tertiary to-primary bg-[length:200%_100%]">Projects</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: '0.2s' }}>
             A showcase of innovative solutions that blend cutting-edge technology
             with exceptional user experiences
           </p>
@@ -66,11 +66,11 @@ const ProjectsSection = () => {
         {/* Featured Project */}
         <div className="mb-20">
           {projects.filter((p) => p.featured).map((project) => (
-            <div key={project.id} className="glass-card p-8 rounded-3xl hover-lift">
+            <div key={project.id} className="glass-card p-8 rounded-3xl hover-lift animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Project Image */}
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500 animate-rotate-360" />
                   <img
                     src={project.image}
                     alt={project.title}

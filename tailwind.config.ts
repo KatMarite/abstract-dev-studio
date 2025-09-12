@@ -234,6 +234,32 @@ export default {
             borderColor: "hsl(var(--primary))",
           },
         },
+        "shimmer": {
+          "0%": {
+            backgroundPosition: "-200% 0",
+          },
+          "100%": {
+            backgroundPosition: "200% 0",
+          },
+        },
+        "slide-up": {
+          from: {
+            opacity: "0",
+            transform: "translateY(50px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "rotate-360": {
+          from: {
+            transform: "rotate(0deg)",
+          },
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -251,6 +277,9 @@ export default {
         "gradient-shift": "gradient-shift 4s ease-in-out infinite",
         "typing": "typing 2s steps(40, end)",
         "blink": "blink 1s infinite",
+        "shimmer": "shimmer 2s linear infinite",
+        "slide-up": "slide-up 0.8s ease-out",
+        "rotate-360": "rotate-360 20s linear infinite",
       },
     },
   },

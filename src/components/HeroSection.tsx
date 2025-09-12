@@ -46,17 +46,29 @@ const HeroSection = () => {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-          <button className="btn-hero group animate-scale-up" style={{ animationDelay: '1s' }}>
+          <button 
+            onClick={() => {
+              const projectsSection = document.querySelector('#projects');
+              projectsSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="btn-hero group animate-scale-up" 
+            style={{ animationDelay: '1s' }}
+          >
             <span className="relative z-10 flex items-center gap-3">
               View My Work
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </span>
           </button>
           
-          <button className="btn-secondary group animate-scale-up" style={{ animationDelay: '1.2s' }}>
+          <a 
+            href="/resume-katleho-marite.pdf" 
+            download="Katleho_Marite_Resume.pdf"
+            className="btn-secondary group animate-scale-up" 
+            style={{ animationDelay: '1.2s' }}
+          >
             <Download className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
             <span>Download Resume</span>
-          </button>
+          </a>
         </div>
         
         {/* Social Links */}
@@ -64,7 +76,7 @@ const HeroSection = () => {
           {[
             { icon: Github, href: "#", label: "GitHub", delay: "1.4s" },
             { icon: Linkedin, href: "#", label: "LinkedIn", delay: "1.6s" },
-            { icon: Mail, href: "#", label: "Email", delay: "1.8s" }
+            { icon: Mail, href: "mailto:katlehomarite@gmail.com", label: "Email", delay: "1.8s" }
           ].map(({ icon: Icon, href, label, delay }) => (
             <a
               key={label}

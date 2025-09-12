@@ -39,7 +39,7 @@ const ProjectsSection = () => {
     {
       id: 4,
       title: "AI Sentiment Analysis Dashboard",
-      category: "AR/VR",
+      category: "Web Application",
       description:
         "An immersive augmented reality shopping experience that allows customers to visualize products in their space before purchase.",
       technologies: ["Three.js", "WebXR", "React", "Python", "TensorFlow"],

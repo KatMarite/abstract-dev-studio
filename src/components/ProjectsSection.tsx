@@ -1,4 +1,5 @@
 import { ExternalLink, Github, Play } from "lucide-react";
+import jobreadiness from "../assets/job-readiness.jpg";
 
 const ProjectsSection = () => {
   const projects = [
@@ -10,7 +11,7 @@ const ProjectsSection = () => {
         "A comprehensive sustainability tracking platform that helps businesses monitor and reduce their carbon footprint through interactive data visualization and actionable insights.",
       technologies: ["React", "Node.js", "MongoDB", "D3.js", "AWS"],
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center",
+        jobreadiness,
       gradient: "from-emerald-500 to-teal-600",
       featured: true,
       liveDemoUrl: "https://copy-of-smart-job-readiness-coach-953327695941.us-west1.run.app/",

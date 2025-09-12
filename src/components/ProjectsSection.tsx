@@ -13,9 +13,9 @@ const ProjectsSection = () => {
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center",
       gradient: "from-emerald-500 to-teal-600",
       featured: true,
-      liveDemoUrl: "https://job-readiness-demo.example.com",
-      sourceCodeUrl: "https://github.com/KatMarite/Job-Readiness-Coach",
-      projectUrl: "https://job-readiness-project.example.com",
+      liveDemoUrl: "https://copy-of-smart-job-readiness-coach-953327695941.us-west1.run.app/",
+      sourceCodeUrl: "https://github.com/ByteBandits-Org/job-readiness",
+      projectUrl: "https://copy-of-smart-job-readiness-coach-953327695941.us-west1.run.app/",
     },
     {
       id: 2,

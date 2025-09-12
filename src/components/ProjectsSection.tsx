@@ -1,5 +1,6 @@
 import { ExternalLink, Github, Play } from "lucide-react";
 import jobreadiness from "@/assets/job-readiness.png";
+import airesume from "@/assets/ai-resume.png";
 
 const ProjectsSection = () => {
   const projects = [
@@ -26,7 +27,7 @@ const ProjectsSection = () => {
         "A beautifully designed personal finance app with AI-powered insights, budget tracking, and investment portfolio management.",
       technologies: ["React Native", "TypeScript", "Firebase", "TensorFlow"],
       image:
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop&crop=center",
+        airesume,
       gradient: "from-blue-500 to-purple-600",
       liveDemoUrl: "https://ai-resume-builder-2-0.vercel.app/",
       sourceCodeUrl: "https://github.com/ByteBandits-Org/AI-Resume-Builder-2..0",

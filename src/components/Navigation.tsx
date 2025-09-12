@@ -56,13 +56,17 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center gap-4">
-            <button className="glass px-4 py-2 rounded-xl hover-lift flex items-center gap-2 font-medium">
-              <Download className="w-4 h-4" />
-              <span>Resume</span>
-            </button>
-          </div>
+         {/* Desktop CTA Buttons */}
+<div className="hidden md:flex items-center gap-4">
+  <a
+    href="/resume.pdf"
+    download
+    className="glass px-4 py-2 rounded-xl hover-lift flex items-center gap-2 font-medium"
+  >
+    <Download className="w-4 h-4" />
+    <span>Resume</span>
+  </a>
+</div>
 
           {/* Mobile Menu Button */}
           <button

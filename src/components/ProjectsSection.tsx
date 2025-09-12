@@ -70,7 +70,7 @@ const ProjectsSection = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Project Image */}
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500 animate-pulse-glow" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-5000 animate-pulse-glow" />
                   <img
                     src={project.image}
                     alt={project.title}

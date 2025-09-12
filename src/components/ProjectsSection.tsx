@@ -4,7 +4,7 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Job Readines Coach",
+      title: "Job Readiness Coach",
       category: "Web Application",
       description:
         "A comprehensive sustainability tracking platform that helps businesses monitor and reduce their carbon footprint through interactive data visualization and actionable insights.",

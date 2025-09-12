@@ -27,9 +27,9 @@ const ProjectsSection = () => {
       image:
         "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop&crop=center",
       gradient: "from-blue-500 to-purple-600",
-      liveDemoUrl: "https://ai-resume-demo.example.com",
-      sourceCodeUrl: "https://github.com/KatMarite/ai-resume-builder",
-      projectUrl: "https://ai-resume-builder.example.com",
+      liveDemoUrl: "https://ai-resume-builder-2-0.vercel.app/",
+      sourceCodeUrl: "https://github.com/ByteBandits-Org/AI-Resume-Builder-2..0",
+      projectUrl: "https://ai-resume-builder-2-0.vercel.app/",
     },
     {
       id: 3,
@@ -41,9 +41,9 @@ const ProjectsSection = () => {
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&crop=center",
       gradient: "from-pink-500 to-rose-600",
-      liveDemoUrl: "https://verse-engine-demo.example.com",
-      sourceCodeUrl: "https://github.com/KatMarite/verse-engine",
-      projectUrl: "https://verse-engine.example.com",
+      liveDemoUrl: "https://verseengine.netlify.app/",
+      sourceCodeUrl: "https://github.com/ByteBandits-Org/verse-scribe-engine",
+      projectUrl: "https://verseengine.netlify.app/",
     },
     {
       id: 4,
@@ -55,9 +55,9 @@ const ProjectsSection = () => {
       image:
         "https://images.unsplash.com/photo-1592478411213-6153e4ebc696?w=800&h=600&fit=crop&crop=center",
       gradient: "from-orange-500 to-red-600",
-      liveDemoUrl: "https://sentiment-dashboard-demo.example.com",
-      sourceCodeUrl: "https://github.com/KatMarite/sentiment-dashboard",
-      projectUrl: "https://sentiment-dashboard.example.com",
+      liveDemoUrl: "https://sentiment-api-explorer.vercel.app/",
+      sourceCodeUrl: "https://github.com/ByteBandits-Org/sentiment-api-explorer",
+      projectUrl: "https://sentiment-api-explorer.vercel.app/",
     },
   ];
 

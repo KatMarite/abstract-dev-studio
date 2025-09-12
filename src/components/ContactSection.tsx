@@ -26,19 +26,19 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "katleho.marite@email.com",
-      href: "mailto:katleho.marite@email.com"
+      value: "katlehomarite@gmail.com",
+      href: "mailto:katlehomarite@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+27 (833) 744-926",
+      href: "tel:+27833744926"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Pretoria, South Africa",
       href: "#"
     }
   ];

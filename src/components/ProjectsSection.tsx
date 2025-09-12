@@ -16,7 +16,7 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
-      title: "FinanceFlow Mobile",
+      title: "AI Resume Builder",
       category: "Mobile App",
       description:
         "A beautifully designed personal finance app with AI-powered insights, budget tracking, and investment portfolio management.",
@@ -27,7 +27,7 @@ const ProjectsSection = () => {
     },
     {
       id: 3,
-      title: "CreativeSpace Platform",
+      title: "Verse Engine",
       category: "SaaS Platform",
       description:
         "A collaborative workspace for creative teams with real-time editing, version control, and project management features.",
@@ -38,7 +38,7 @@ const ProjectsSection = () => {
     },
     {
       id: 4,
-      title: "AR Shopping Experience",
+      title: "AI Sentiment Analysis Dashboard",
       category: "AR/VR",
       description:
         "An immersive augmented reality shopping experience that allows customers to visualize products in their space before purchase.",

@@ -1,5 +1,5 @@
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
-import heroBackground from "@/assets/hero-background1.jpg";
+import heroBackground from "@/assets/hero-background2.jpg";
 
 const HeroSection = () => {
   return (

@@ -59,7 +59,7 @@ const Navigation = () => {
          {/* Desktop CTA Buttons */}
 <div className="hidden md:flex items-center gap-4">
   <a
-    href="/resume.pdf"
+    href="/resume-katleho-marite.pdf"
     download
     className="glass px-4 py-2 rounded-xl hover-lift flex items-center gap-2 font-medium"
   >

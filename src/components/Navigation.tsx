@@ -62,11 +62,7 @@ const Navigation = () => {
               <Download className="w-4 h-4" />
               <span>Resume</span>
             </button>
-            <button className="btn-secondary">
-              <span>Hire Me</span>
-              <ExternalLink className="w-4 h-4" />
-            </button>
-          </div> 
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -100,10 +96,6 @@ const Navigation = () => {
                 <button className="w-full glass px-4 py-3 rounded-xl hover-lift flex items-center justify-center gap-2 font-medium">
                   <Download className="w-4 h-4" />
                   <span>Download Resume</span>
-                </button>
-                <button className="w-full btn-secondary">
-                  <span>Hire Me</span>
-                  <ExternalLink className="w-4 h-4" />
                 </button>
               </div>
             </div>

@@ -47,28 +47,6 @@ const ProjectsSection = () => {
         "https://images.unsplash.com/photo-1592478411213-6153e4ebc696?w=800&h=600&fit=crop&crop=center",
       gradient: "from-orange-500 to-red-600",
     },
-    {
-      id: 5,
-      title: "Smart City IoT Dashboard",
-      category: "IoT Platform",
-      description:
-        "Real-time monitoring and analytics dashboard for smart city infrastructure, processing data from thousands of IoT sensors.",
-      technologies: ["Vue.js", "Python", "InfluxDB", "Kubernetes", "Docker"],
-      image:
-        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop&crop=center",
-      gradient: "from-indigo-500 to-blue-600",
-    },
-    {
-      id: 6,
-      title: "AI Content Generator",
-      category: "AI/ML Tool",
-      description:
-        "An intelligent content creation platform that generates high-quality marketing copy, blog posts, and social media content.",
-      technologies: ["Python", "OpenAI API", "FastAPI", "React", "Redis"],
-      image:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&crop=center",
-      gradient: "from-violet-500 to-purple-600",
-    },
   ];
 
   return (
@@ -230,13 +208,6 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {/* View More Button */}
-        <div className="text-center mt-16">
-          <button className="btn-secondary">
-            <span>View All Projects</span>
-            <ExternalLink className="w-5 h-5" />
-          </button>
-        </div>
       </div>
     </section>
   );

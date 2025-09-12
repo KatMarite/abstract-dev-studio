@@ -63,33 +63,6 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Contact Info & CTA */}
           <div className="space-y-8">
-            {/* Main CTA Card */}
-            <div className="glass-card p-8 rounded-3xl hover-lift">
-              <div className="space-y-6">
-                <div className="inline-block glass px-4 py-2 rounded-full">
-                  <span className="text-sm font-medium gradient-text">🚀 Ready to start?</span>
-                </div>
-                
-                <h3 className="text-3xl font-bold">
-                  <span className="gradient-text">Available</span> for new projects
-                </h3>
-                
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  I'm currently accepting new client projects and would love to hear about your next big idea. 
-                  Whether it's a web application, mobile app, or something completely unique - let's make it happen!
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="btn-hero flex-1">
-                    <span>Start a Project</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </button>
-                  <button className="btn-secondary">
-                    <span>Schedule Call</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
             {/* Contact Information */}
             <div className="space-y-4">
@@ -215,21 +188,6 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-20">
-          <div className="glass-card p-8 rounded-3xl hover-lift max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold mb-4">
-              Ready to turn your <span className="gradient-text">ideas into reality</span>?
-            </h3>
-            <p className="text-lg text-muted-foreground mb-6">
-              Let's collaborate and create something extraordinary together.
-            </p>
-            <button className="btn-secondary">
-              <span>Book a Discovery Call</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -10,7 +10,7 @@ const ProjectsSection = () => {
       title: "Job Readiness Coach",
       category: "Web Application",
       description:
-        "A comprehensive sustainability tracking platform that helps businesses monitor and reduce their carbon footprint through interactive data visualization and actionable insights.",
+        "Smart Job & Wellness Coach built with Google AI Studio. Integrates career guidance, interview preparation, and wellness support through a conversational AI chatbot with voice and text interaction, secure data tracking, and real-time user feedback.",
       technologies: ["React", "Node.js", "MongoDB", "D3.js", "AWS"],
       image:
         jobreadiness,
@@ -39,7 +39,7 @@ const ProjectsSection = () => {
       title: "Verse Engine",
       category: "SaaS Platform",
       description:
-        "A collaborative workspace for creative teams with real-time editing, version control, and project management features.",
+        "Unleash your creativity with AI-powered storytelling. Craft compelling narratives, evocative poetry, and captivating prose with our advanced generative writing studio",
       technologies: ["Next.js", "GraphQL", "PostgreSQL", "Socket.io"],
       image:
         "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

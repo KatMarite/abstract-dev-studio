@@ -95,13 +95,17 @@ const Navigation = () => {
                 </button>
               ))}
               
-              {/* Mobile CTA Buttons */}
-              <div className="pt-4 space-y-3">
-                <button className="w-full glass px-4 py-3 rounded-xl hover-lift flex items-center justify-center gap-2 font-medium">
-                  <Download className="w-4 h-4" />
-                  <span>Download Resume</span>
-                </button>
-              </div>
+             {/* Mobile CTA Buttons */}
+<div className="pt-4 space-y-3">
+  <a
+    href="/resume-katleho-marite.pdf"
+    download
+    className="w-full glass px-4 py-3 rounded-xl hover-lift flex items-center justify-center gap-2 font-medium"
+  >
+    <Download className="w-4 h-4" />
+    <span>Download Resume</span>
+  </a>
+</div>
             </div>
           </div>
         )}

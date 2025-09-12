@@ -32,8 +32,8 @@ const HeroSection = () => {
         </h1>
         
         <div className="text-2xl md:text-4xl font-bold mb-8 animate-scale-up" style={{ animationDelay: '0.6s' }}>
-          <span className="gradient-text-secondary bg-gradient-to-r from-secondary via-accent to-secondary bg-[length:200%_100%] animate-gradient-shift">Creative</span>{" "}
-          <span className="text-foreground">Software Developer</span>
+          <span className="gradient-text-secondary bg-gradient-to-r from-secondary via-accent to-secondary bg-[length:200%_100%] animate-gradient-shift">AI/ML Engineer</span>{" "}
+          <span className="text-foreground"> & Web Developer</span>
         </div>
         
         {/* Tagline */}

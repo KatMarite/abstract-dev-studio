@@ -10,11 +10,11 @@ import {
 const CertificatesSection = () => {
   const certificates = [
     {
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2024",
+      title: "Artificial Intelligence on Microsoft Azure",
+      issuer: "Microsoft",
+      date: "2025",
       credentialId: "AWS-SA-2024-001",
-      image: "/placeholder.svg",
+      image: "/download.png",
       verifyLink: "#"
     },
     {

@@ -13,41 +13,41 @@ const CertificatesSection = () => {
       title: "Artificial Intelligence on Microsoft Azure",
       issuer: "Microsoft",
       date: "2025",
-      credentialId: "AWS-SA-2024-001",
+      credentialId: "KPX8TRT25BLG",
       image: "/download.png",
-      verifyLink: "#"
+      verifyLink: "https://coursera.org/share/d1f694cbd6cde375066a87d3e2e162c4"
     },
     {
-      title: "React Developer Certification",
-      issuer: "Meta (Facebook)",
-      date: "2023",
-      credentialId: "META-REACT-2023-045",
+      title: "Introduction to Artificial Intelligence (AI)",
+      issuer: "IBM",
+      date: "2025",
+      credentialId: "JGSF1YD7ETEQ",
       image: "/placeholder.svg",
-      verifyLink: "#"
+      verifyLink: "https://coursera.org/share/3d09a6ddad9e464ac1bc92767d553d05"
     },
     {
-      title: "Google Cloud Professional Developer",
-      issuer: "Google Cloud",
-      date: "2023",
-      credentialId: "GCP-DEV-2023-112",
+      title: "AI Essentials",
+      issuer: "Intel",
+      date: "2025",
+      credentialId: "54FL5EAWABDT",
       image: "/placeholder.svg", 
-      verifyLink: "#"
+      verifyLink: "https://coursera.org/share/8a304682d1f6e27f1550cead007c63d9"
     },
     {
-      title: "Certified Kubernetes Administrator",
-      issuer: "Cloud Native Computing Foundation",
-      date: "2024",
-      credentialId: "CKA-2024-067",
+      title: "Python for Data Science, AI & Development",
+      issuer: "IBM",
+      date: "2025",
+      credentialId: "SP9GGK1SZZDD",
       image: "/placeholder.svg",
-      verifyLink: "#"
+      verifyLink: "https://coursera.org/share/8626b7c5dd099257454362caf84e6934"
     },
     {
-      title: "MongoDB Certified Developer",
-      issuer: "MongoDB Inc.",
-      date: "2023",
-      credentialId: "MONGODB-DEV-2023-089",
+      title: "Generative AI with Large Language Models",
+      issuer: "DeepLearning.AI, Amazon Web Services",
+      date: "2025",
+      credentialId: "01XJ52FNKS6O",
       image: "/placeholder.svg",
-      verifyLink: "#"
+      verifyLink: "https://www.coursera.org/account/accomplishments/certificate/01XJ52FNKS6O"
     }
   ];
 

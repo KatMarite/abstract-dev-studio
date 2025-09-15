@@ -1,5 +1,5 @@
 import { Code, Coffee, Lightbulb, Rocket } from "lucide-react";
-import developerAvatar from "@/assets/developer-avatar1.jpg";
+import developerAvatar from "@/assets/developer-avatar3.jpg";
 
 const AboutSection = () => {
   const stats = [

@@ -110,12 +110,12 @@ const SkillsSection = () => {
                 onClick={() => setActiveCategory(key)}
                 className={`
                   glass-card px-6 py-4 rounded-2xl hover-scale transition-all duration-300
-                  ${isActive ? 'ring-2 ring-primary bg-gradient-to-r ' + category.color + ' text-background' : 'hover-lift'}
+                  ${isActive ? 'ring-2 ring-purple-400 bg-gradient-to-r from-purple-500 to-purple-700 text-white shadow-lg shadow-purple-500/25' : 'hover-lift'}
                 `}
               >
                 <div className="flex items-center gap-3">
-                  <Icon className={`w-5 h-5 ${isActive ? 'text-background' : 'text-primary'}`} />
-                  <span className={`font-semibold ${isActive ? 'text-background' : 'text-foreground'}`}>
+                  <Icon className={`w-5 h-5 ${isActive ? 'text-white' : 'text-primary'}`} />
+                  <span className={`font-semibold ${isActive ? 'text-white' : 'text-foreground'}`}>
                     {category.title}
                   </span>
                 </div>

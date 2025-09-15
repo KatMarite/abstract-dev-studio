@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Download, ExternalLink } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +18,7 @@ const Navigation = () => {
   const navItems = [
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
+    { label: "Certificates", href: "#certificates" },
     { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" }
   ];
@@ -56,8 +58,9 @@ const Navigation = () => {
             ))}
           </div>
 
-         {/* Desktop CTA Buttons */}
+          {/* Desktop CTA Buttons */}
 <div className="hidden md:flex items-center gap-4">
+  <ThemeToggle />
   <a
     href="/katlehocv.pdf"
     download
@@ -95,8 +98,11 @@ const Navigation = () => {
                 </button>
               ))}
               
-             {/* Mobile CTA Buttons */}
+              {/* Mobile CTA Buttons */}
 <div className="pt-4 space-y-3">
+  <div className="flex justify-center mb-3">
+    <ThemeToggle />
+  </div>
   <a
     href="/katlehocv.pdf"
     download

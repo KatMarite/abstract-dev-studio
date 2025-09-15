@@ -23,7 +23,7 @@ const ProjectsSection = () => {
     {
       id: 2,
       title: "AI Resume Builder",
-      category: "Mobile App",
+      category: "Web App",
       description:
         "An AI powered resume builder created to help job seekers of all levels generate a professional and ATS approved resume.",
       technologies: ["React Native", "TypeScript", "Firebase", "TensorFlow"],
@@ -37,7 +37,7 @@ const ProjectsSection = () => {
     {
       id: 3,
       title: "Verse Engine",
-      category: "SaaS Platform",
+      category: "Web App",
       description:
         "Unleash your creativity with AI-powered storytelling. Craft compelling narratives, evocative poetry, and captivating prose with our advanced generative writing studio",
       technologies: ["Next.js", "GraphQL", "PostgreSQL", "Socket.io"],
@@ -53,7 +53,7 @@ const ProjectsSection = () => {
       title: "AI Sentiment Analysis Dashboard",
       category: "Web Application",
       description:
-        "An immersive augmented reality shopping experience that allows customers to visualize products in their space before purchase.",
+        "An interactive dashboard that analyzes sentiment in text data, enabling users to understand emotional tone in customer reviews, social media posts, or other text content.",
       technologies: ["Three.js", "WebXR", "React", "Python", "TensorFlow"],
       image:
         sentiment,

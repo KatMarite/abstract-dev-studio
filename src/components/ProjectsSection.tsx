@@ -25,7 +25,7 @@ const ProjectsSection = () => {
       title: "AI Resume Builder",
       category: "Mobile App",
       description:
-        "A beautifully designed personal finance app with AI-powered insights, budget tracking, and investment portfolio management.",
+        "An AI powered resume builder created to help job seekers of all levels generate a professional and ATS approved resume.",
       technologies: ["React Native", "TypeScript", "Firebase", "TensorFlow"],
       image:
         airesume,

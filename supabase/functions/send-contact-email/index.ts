@@ -1,8 +1,8 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
-const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
+const SUPABASE_URL = Deno.env.get("https://sfljpsoprxvixxksnowj.supabase.co")!;
+const SUPABASE_ANON_KEY = Deno.env.get("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNmbGpwc29wcnh2aXh4a3Nub3dqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc5MjExNjEsImV4cCI6MjA3MzQ5NzE2MX0.fwjuyK2TCiFPV4Li8fe4w42p1rBz5-sIWLwZAm-GgBk")!;
 
 interface ContactFormData {
   name: string;

@@ -22,6 +22,7 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Form submission started');
     setIsSubmitting(true);
 
     try {
@@ -29,20 +30,24 @@ const ContactSection = () => {
       
       // Validate form data
       if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+        console.error('Form validation failed - missing fields');
         throw new Error('All fields are required');
       }
-      
+
+      console.log('About to call supabase function...');
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData,
       });
 
-      console.log('Supabase response:', { data, error });
+      console.log('Supabase function response:', { data, error });
+      
       if (error) {
-        console.error('Supabase error:', error);
-        throw error;
+        console.error('Supabase function error:', error);
+        throw new Error(`Function error: ${error.message}`);
       }
       
       const result = data;
+      console.log('Processing result:', result);
 
       if (result.success) {
         toast({
@@ -61,13 +66,17 @@ const ContactSection = () => {
         throw new Error(result.error || "Failed to send message");
       }
     } catch (error) {
-      console.error("Error sending message:", error);
+      console.error('Contact form error details:', error);
+      console.error('Error message:', error instanceof Error ? error.message : 'Unknown error');
+      console.error('Error stack:', error instanceof Error ? error.stack : 'No stack trace');
+      
       toast({
         title: "Failed to send message",
-        description: "Please try again later or contact me directly via email.",
+        description: `Error: ${error instanceof Error ? error.message : 'Unknown error occurred'}. Please try again later or contact me directly via email.`,
         variant: "destructive",
       });
     } finally {
+      console.log('Form submission completed, setting isSubmitting to false');
       setIsSubmitting(false);
     }
   };

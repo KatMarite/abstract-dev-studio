@@ -1,6 +1,7 @@
 import { ArrowRight, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -24,15 +25,13 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/functions/v1/send-contact-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData,
       });
 
-      const result = await response.json();
+      if (error) throw error;
+      
+      const result = data;
 
       if (result.success) {
         toast({

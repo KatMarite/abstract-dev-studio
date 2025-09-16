@@ -53,7 +53,7 @@ serve(async (req) => {
 
     // Store form submission in database
     const { data, error: dbError } = await supabase
-      .from("contact_submissions")
+      .from("contact")
       .insert([
         {
           name,

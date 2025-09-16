@@ -26,12 +26,21 @@ const ContactSection = () => {
 
     try {
       console.log('Submitting form data:', formData);
+      
+      // Validate form data
+      if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+        throw new Error('All fields are required');
+      }
+      
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData,
       });
 
       console.log('Supabase response:', { data, error });
-      if (error) throw error;
+      if (error) {
+        console.error('Supabase error:', error);
+        throw error;
+      }
       
       const result = data;
 

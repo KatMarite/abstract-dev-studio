@@ -33,9 +33,11 @@ serve(async (req) => {
 
   try {
     const { name, email, subject, message }: ContactFormData = await req.json();
-
+    console.log('Processing contact form submission:', { name, email, subject, message });
+    
     // Validate required fields
     if (!name || !email || !subject || !message) {
+      console.log('Validation failed: missing required fields');
       return new Response(
         JSON.stringify({ error: "All fields are required" }),
         {
@@ -50,6 +52,7 @@ serve(async (req) => {
 
     // Initialize Supabase client
     const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    console.log('Supabase client initialized');
 
     // Store form submission in database
     const { data, error: dbError } = await supabase
@@ -62,52 +65,32 @@ serve(async (req) => {
           message,
         },
       ])
-      .select()
-      .single();
+      .select();
 
     if (dbError) {
       console.error("Database error:", dbError);
-      throw new Error("Failed to store submission");
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: `Database error: ${dbError.message}`,
+        }),
+        {
+          status: 500,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      );
     }
 
-    // Here you can add email sending logic using services like:
-    // - Resend (recommended)
-    // - SendGrid
-    // - Mailgun
-    // 
-    // For now, we'll just return success
-    // Example with Resend:
-    /*
-    const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
-    if (RESEND_API_KEY) {
-      const emailResponse = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${RESEND_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from: "contact@yourdomain.com",
-          to: ["katlehomarite@gmail.com"],
-          subject: `New Contact Form: ${subject}`,
-          html: `
-            <h2>New Contact Form Submission</h2>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Subject:</strong> ${subject}</p>
-            <p><strong>Message:</strong></p>
-            <p>${message.replace(/\n/g, '<br>')}</p>
-          `,
-        }),
-      });
-    }
-    */
+    console.log('Successfully inserted contact form data:', data);
 
     return new Response(
       JSON.stringify({
         success: true,
         message: "Thank you for your message! I'll get back to you within 24 hours.",
-        submissionId: data.id,
+        submissionId: data?.[0]?.created_at,
       }),
       {
         status: 200,

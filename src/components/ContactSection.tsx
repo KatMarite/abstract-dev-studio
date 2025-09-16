@@ -25,10 +25,12 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
+      console.log('Submitting form data:', formData);
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData,
       });
 
+      console.log('Supabase response:', { data, error });
       if (error) throw error;
       
       const result = data;

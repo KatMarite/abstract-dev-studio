@@ -4,7 +4,9 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
+  console.log('=== ContactSection component loaded ===');
   const { toast } = useToast();
+  console.log('Toast hook initialized:', toast);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,8 +14,10 @@ const ContactSection = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  console.log('ContactSection state initialized, formData:', formData);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    console.log('=== INPUT CHANGE ===', e.target.name, e.target.value);
     setFormData({
       ...formData,
       [e.target.name]: e.target.value

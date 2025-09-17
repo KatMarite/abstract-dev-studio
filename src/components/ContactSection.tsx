@@ -21,6 +21,7 @@ const ContactSection = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    console.log('=== FORM SUBMIT HANDLER CALLED ===');
     e.preventDefault();
     console.log('Form submission started');
     setIsSubmitting(true);
@@ -79,6 +80,12 @@ const ContactSection = () => {
       console.log('Form submission completed, setting isSubmitting to false');
       setIsSubmitting(false);
     }
+  };
+
+  // Add button click handler for debugging
+  const handleButtonClick = () => {
+    console.log('=== BUTTON CLICKED ===');
+    console.log('Current form data:', formData);
   };
 
   const contactInfo = [
@@ -232,6 +239,7 @@ const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
+                onClick={handleButtonClick}
                 className="btn-hero w-full group disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <span className="relative z-10 flex items-center justify-center gap-3">

@@ -50,12 +50,16 @@ serve(async (req) => {
   try {
     const { name, email, subject, message }: ContactFormData = await req.json();
     console.log('Processing contact form submission:', { name, email, subject, message });
+    console.log('Request body parsed successfully');
     
     // Validate required fields
     if (!name || !email || !subject || !message) {
-      console.log('Validation failed: missing required fields');
+      console.log('Validation failed: missing required fields', { name: !!name, email: !!email, subject: !!subject, message: !!message });
       return new Response(
-        JSON.stringify({ error: "All fields are required" }),
+        JSON.stringify({ 
+          success: false,
+          error: "All fields are required" 
+        }),
         {
           status: 400,
           headers: {
@@ -66,10 +70,14 @@ serve(async (req) => {
       );
     }
 
-    // Initialize Supabase client
-    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-    console.log('Supabase client initialized');
+    console.log('All fields validated successfully');
 
+    // Initialize Supabase client
+    console.log('Initializing Supabase client with URL:', SUPABASE_URL);
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    console.log('Supabase client initialized successfully');
+
+    console.log('Attempting to insert data into contact table...');
     // Store form submission in database
     const { data, error: dbError } = await supabase
       .from("contact")
@@ -83,12 +91,20 @@ serve(async (req) => {
       ])
       .select();
 
+    console.log('Database insert result:', { data, error: dbError });
+
     if (dbError) {
-      console.error("Database error:", dbError);
+      console.error("Database error details:", {
+        message: dbError.message,
+        details: dbError.details,
+        hint: dbError.hint,
+        code: dbError.code
+      });
       return new Response(
         JSON.stringify({
           success: false,
           error: `Database error: ${dbError.message}`,
+          details: dbError.details
         }),
         {
           status: 500,

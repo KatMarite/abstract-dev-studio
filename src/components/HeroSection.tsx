@@ -42,14 +42,7 @@ const HeroSection = () => {
         </div>
         
         {/* Tagline */}
-        <p style={{
-        animationDelay: '0.8s'
-      }} className="text-xl md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-up text-slate-950">
-          Crafting digital experiences that blend 
-          <span className="gradient-text font-semibold hover:animate-pulse"> innovation</span>, 
-          <span className="gradient-text-secondary font-semibold hover:animate-pulse"> aesthetics</span>, and 
-          <span className="gradient-text font-semibold hover:animate-pulse"> functionality</span>
-        </p>
+        
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">

@@ -1,12 +1,12 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-// Use the correct environment variable names that are available in edge functions
+// Use service role to bypass RLS for contact form submissions
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL") ?? "https://sfljpsoprxvixxksnowj.supabase.co";
-const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY") ?? "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNmbGpwc29wcnh2aXh4a3Nub3dqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc5MjExNjEsImV4cCI6MjA3MzQ5NzE2MX0.fwjuyK2TCiFPV4Li8fe4w42p1rBz5-sIWLwZAm-GgBk";
+const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
 console.log('Edge function started, SUPABASE_URL:', SUPABASE_URL);
-console.log('Edge function started, SUPABASE_ANON_KEY exists:', !!SUPABASE_ANON_KEY);
+console.log('Edge function started, SUPABASE_SERVICE_ROLE_KEY exists:', !!SUPABASE_SERVICE_ROLE_KEY);
 
 interface ContactFormData {
   name: string;
@@ -72,9 +72,14 @@ serve(async (req) => {
 
     console.log('All fields validated successfully');
 
-    // Initialize Supabase client
+    // Initialize Supabase client with service role to bypass RLS
     console.log('Initializing Supabase client with URL:', SUPABASE_URL);
-    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false
+      }
+    });
     console.log('Supabase client initialized successfully');
 
     console.log('Attempting to insert data into contact table...');
